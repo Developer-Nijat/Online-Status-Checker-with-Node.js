@@ -1,5 +1,7 @@
 # Online Status Checker with Node.js
 
+![alt text](image.png)
+
 This is a simple web application built with Node.js and Express that allows users to monitor the online status of websites or services. It periodically checks the status of the websites and notifies users via desktop notifications and email (using Gmail SMTP).
 
 ## Features
