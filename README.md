@@ -1,8 +1,4 @@
-Sure! Here is a `README.md` content template for your "Online Status Checker" Node.js app:
-
----
-
-# Online Status Checker
+# Online Status Checker with Node.js
 
 This is a simple web application built with Node.js and Express that allows users to monitor the online status of websites or services. It periodically checks the status of the websites and notifies users via desktop notifications and email (using Gmail SMTP).
 
