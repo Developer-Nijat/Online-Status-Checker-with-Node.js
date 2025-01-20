@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Site</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script>
+      // Regular expression to check if the URL is valid
+      const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+    
+      function validateUrl(event) {
+        const urlInput = document.getElementById('newSite').value;
+    
+        if (!urlRegex.test(urlInput)) {
+          alert('Please enter a valid URL (e.g., http://example.com or https://example.com)');
+          event.preventDefault(); // Prevent form submission
+          return false;
+        }
+    
+        return true; // Allow form submission if URL is valid
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Edit Site</h1>
+      <form action="/edit/<%= site.id %>" method="POST" onsubmit="return validateUrl(event)">
+        <label for="newSite">New URL:</label>
+        <input
+          type="url"
+          id="newSite"
+          name="newSite"
+          value="<%= site.url %>"
+          required
+        />
+        <button type="submit">Save Changes</button>
+      </form>
+      <div>
+        <a href="/">Cancel</a>
+      </div>
+    </div>
+  </body>
+</html>
