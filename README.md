@@ -30,7 +30,7 @@ This is a simple web application built with Node.js and Express that allows user
 ### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/Developer-Nijat/Online-Status-Checker-with-Node.js
+git clone https://github.com/Developer-Nijat/Online-Status-Checker-with-Node.js.git
 cd online-status-checker
 ```
 
